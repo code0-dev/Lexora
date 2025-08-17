@@ -10,7 +10,7 @@ async function fetchWords() {
       words = await res.json();
       getWord();
     } catch (err) {
-      console.error("Failed to fetch words:", err);
+      alert("Failed to fetch words:", err);
     }
 }
 fetchWords();
