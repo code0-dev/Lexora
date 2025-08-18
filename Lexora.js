@@ -3,18 +3,27 @@
 const API = "https://lexora-words-api.onrender.com/words";
 
 let words = [];
+const loader = document.getElementById("loader");
+const cont = document.querySelector(".cont");
+const chancesCont = document.querySelector(".chances");
 
 async function fetchWords() {
     try {
       const res = await fetch(API);
       words = await res.json();
+      finishLoading();
       getWord();
     } catch (err) {
       alert("Failed to fetch words:", err);
     }
 }
 fetchWords();
-  
+
+function finishLoading() {
+    loader.style.display = "none";
+    chancesCont.style.display = "inline-block";
+    cont.style.display = "inline-block"
+}
 
 const wordCont = document.getElementById("word-cont");
 let numOfCorrectLetters = 0;
