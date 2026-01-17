@@ -338,6 +338,7 @@ body {
   letter-spacing: 3px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .word-cont span {
