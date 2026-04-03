@@ -266,9 +266,10 @@ body {
   }
 
 .cont {
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-width: 703px;
   background-color: #252525;
   border-radius: 10px;
@@ -368,7 +369,7 @@ body {
 form {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
   width: 100%;
   max-width: 400px;
   align-items: center;
